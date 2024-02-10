@@ -18,6 +18,11 @@ const config = {
       },
     },
     extend: {
+      fontFamily: {
+        windsor: ["var(--windsor)"],
+        din: ["var(--din)"],
+
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
