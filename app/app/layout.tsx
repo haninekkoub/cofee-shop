@@ -1,8 +1,20 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
+import localFont from "next/font/local";
+import Navbar from "@/components/nav";
+import Footer from "@/components/footer";
 
-const inter = Inter({ subsets: ["latin"] });
+const din = localFont({
+  src: "../fonts/Dinrundschriftmittel.otf",
+  display: "swap",
+  variable: "--din",
+});
+
+const windsor = localFont({
+  src: "../fonts/Windsor.ttf",
+  display: "swap",
+  variable: "--windsor",
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,7 +28,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body
+        className={`${din.variable} ${windsor.variable} max-w-[1052px] mx-auto`}
+      >
+        <Navbar />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }
