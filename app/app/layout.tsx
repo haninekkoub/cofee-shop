@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import localFont from "next/font/local";
-import Navbar from "@/components/nav";
-import Footer from "@/components/footer";
+import Navbar from "@/components/ui/nav";
+import Footer from "@/components/ui/footer";
 
 const din = localFont({
   src: "../fonts/Dinrundschriftmittel.otf",
@@ -29,10 +29,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${din.variable} ${windsor.variable} max-w-[1052px] mx-auto`}
+        className={`${din.variable} ${windsor.variable} flex flex-col relative max-w-[1052px] py-8 min-h-screen mx-auto`}
       >
         <Navbar />
-        {children}
+        <section className="flex-1 relative">{children}</section>
         <Footer />
       </body>
     </html>
