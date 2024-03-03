@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Social from "./social";
+import Social from "../social";
 
 interface linkProps {
   name: string;
@@ -8,16 +8,16 @@ interface linkProps {
 
 const links: linkProps[] = [
   { name: "Home", href: "/" },
-  { name: "our Stoy", href: "/" },
-  { name: "Location", href: "/" },
-  { name: "news", href: "/" },
-  { name: "shop", href: "/" },
-  { name: "testimonials", href: "/" },
+  { name: "Our Story", href: "/our-story" },
+  { name: "Location", href: "/location" },
+  { name: "News", href: "/" },
+  { name: "Shop", href: "/" },
+  { name: "Testimonials", href: "/" },
 ];
 
 export default function Navbar() {
   return (
-    <nav className="flex items-stratch border-x-2 border-b-2 border-border mt-8 w-full">
+    <nav className="flex items-stratch border-x-2 border-b-2 border-border w-full -mb-[2px]">
       <div className="w-32"></div>
       <div className="flex flex-col w-full border-l-2 border-border">
         <div className="flex justify-end">

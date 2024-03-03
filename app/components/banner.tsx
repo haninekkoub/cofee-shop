@@ -1,15 +1,19 @@
-import React from "react";
+import { BannerBlock } from "@/lib/types";
 
-export default function Banner({ children, align }: any) {
+export default function bannerText({
+  textAlign,
+  bannerText,
+  textSize,
+}: BannerBlock) {
   return (
-    <div
-      className="w-full text-7xl my-20 font-din tracking-wider"
+    <section
+      className="w-full  my-20 font-din tracking-wider"
       style={{
-        textAlign:
-          align === "center" ? "center" : align === "right" ? "right" : "left",
+        textAlign,
+        fontSize: textSize === "large" ? "4.5rem" : "2rem",
       }}
     >
-      {children}
-    </div>
+      {bannerText}
+    </section>
   );
 }

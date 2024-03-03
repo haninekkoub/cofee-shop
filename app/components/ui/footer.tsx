@@ -1,8 +1,8 @@
-import Social from "./social";
+import Social from "../social";
 
 export default function Footer() {
   return (
-    <section className="w-full border-y-2 border-border mb-8 flex items-center ">
+    <section className="w-full border-y-2 border-border flex items-center -mt-[2px]">
       <div className="flex-1 border-r-2 bordder-border py-4 pl-4">
         Cofee shop
       </div>
