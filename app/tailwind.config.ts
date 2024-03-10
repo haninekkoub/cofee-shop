@@ -68,6 +68,10 @@ const config = {
           from: { height: "0" },
           to: { height: "var(--radix-accordion-content-height)" },
         },
+        translate: {
+          "0%": { transform: "translateX(85%)" },
+          "100%": { transform: "translateX(-85%)" },
+        },
         "accordion-up": {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },

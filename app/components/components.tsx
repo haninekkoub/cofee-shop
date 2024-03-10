@@ -4,6 +4,7 @@ import Mission from "./mission";
 import Showcase from "./showcase";
 import TextSegment from "./textSegment";
 import Location from "./location";
+import ProductList from "./productList";
 
 export const Components = {
   "block.about": About,
@@ -12,4 +13,5 @@ export const Components = {
   "block.showcase": Showcase,
   "block.textSegment": TextSegment,
   "block.location": Location,
+  "block.productList": ProductList,
 };

@@ -32,6 +32,20 @@ interface BannerBlock {
     textSegment: PortableTextBlock[]; 
   }
 
+  interface ProductList {
+    products: Product[];
+  }
+  
+  interface Product {
+    image:"image";
+    type:"string"
+    productName:"string";
+    slug:"slug";
+    Price:"number";
+    Description:"string";
+    taste:"string";
+  }
+
   interface Page {
     name: string;
     slug: {
@@ -41,4 +55,4 @@ interface BannerBlock {
     content: Array<BannerBlock | AboutBlock | MissionBlock>;
   }
   
-  export type { BannerBlock, AboutBlock, MissionBlock,ShowCaseBlock,TextSegmentBlock, Page };
+  export type { BannerBlock, AboutBlock, MissionBlock,ShowCaseBlock,TextSegmentBlock,Product, ProductList,Page };
